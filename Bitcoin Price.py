@@ -11,6 +11,9 @@ page = requests.get("https://www.tgju.org/chart/price_dollar_rl")
 soup = BeautifulSoup(page.content, 'html.parser')
 D = soup.find("span", itemprop="price").get_text()
 print("Dolar Price :" + D + " Rials")
+bitcoinrial = int(B) * int(D)
+
+print("Bictoin price in Rials :", bitcoinrial)
 
 
 
